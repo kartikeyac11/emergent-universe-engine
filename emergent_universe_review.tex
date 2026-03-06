@@ -166,7 +166,8 @@ Every cell carries several real-valued fields that evolve each time-step.
 Seven engines are responsible for updating these fields,
 in order:
 
-\begin{center}
+\begin{figure}[h]
+\centering
 \small
 \begin{tikzpicture}[
   every node/.style={draw, rounded corners=4pt, minimum width=3.2cm,
@@ -203,9 +204,12 @@ in order:
 \node[draw=none, right=1.8cm of sc, font=\tiny\sffamily, text width=4.2cm]
   {fits linear laws to field data via an evolutionary search};
 \end{tikzpicture}
-\end{center}
+\caption{Data-flow diagram of the eight engines that run sequentially
+  each simulation step, from the physics substrate at the top to the
+  in-universe science engine at the bottom.}
+\label{fig:arch}
+\end{figure}
 
-\vspace{0.5em}
 The output of each step is rendered to screen using an
 HSV-coloured composite image.
 Every 4 steps, a frame is captured for the output GIF.
